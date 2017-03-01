@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np
 import datetime as dt
 
+##PURPOSE: examining personal fitbit data to check whether minute-by-minute data matches 24 hour data
+
 data = pd.read_csv('/Volumes/LabShareFolder/fitbit_project/fitbit_data/minute_data/all_minute.csv')
 
 mydata = data[data.key ==105]
