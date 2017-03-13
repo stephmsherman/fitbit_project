@@ -1,6 +1,6 @@
 library(nparACT)
-
-f=read.csv("/Volumes/LabShareFolder/fitbit_project/fitbit_data/all_daily_data_processed_worn.csv")
+path = ""
+f=read.csv(paste(path,"all_daily_data_processed_worn.csv",sep=""))
 f$key=as.factor(as.character(f$key))
 f=f[f$walk_dates!="no_fitbit",]
 f$walk_dates=droplevels(f$walk_dates)
@@ -29,5 +29,5 @@ npcr$key=substring(npcr$name,nchar(npcr$name)-2,nchar(npcr$name))
 npcr$key=as.factor(npcr$key)
 
 npcr$name=NULL
-write.csv(npcr, "/Volumes/LabShareFolder/fitbit_project/fitbit_data/npcr_measures.csv",row.names=F)
+write.csv(npcr, paste(path,"npcr_measures.csv",sep=""),row.names=F)
 
