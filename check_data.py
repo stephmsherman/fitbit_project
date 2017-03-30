@@ -32,5 +32,6 @@ all['diff_steps'] = all.activities_steps_x - all.activities_steps_y
 
 no=all[all.diff_steps !=0]
 
+##examining whether match between minute and daily data is off when battery is dead
 df = no[['key','date', 'battery','activities_steps_x','activities_steps_y','diff_steps']]
 df_Empty = df[(df.battery == 'Empty') | (df.battery == 'Low')]

@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+
 m = pd.read_csv('/Volumes/LabShareFolder/fitbit_project/fitbit_data/minute_data/all_min_to_day.csv')
 m.rename(columns={'activities_steps':'activities_steps_min'},inplace=True)
 d = pd.read_csv('/Volumes/LabShareFolder/fitbit_project/fitbit_data/summary_daily_data/all_summary_data_processed.csv')

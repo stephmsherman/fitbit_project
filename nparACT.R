@@ -1,4 +1,6 @@
 library(nparACT)
+
+###add path to where data live
 path = ""
 f=read.csv(paste(path,"all_daily_data_processed_worn.csv",sep=""))
 f$key=as.factor(as.character(f$key))
